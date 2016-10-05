@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no"> 
+	<meta http-equiv="Content-Type">
+	<meta content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=750px, user-scalable=no">
+	<title>会员中心</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css?v=2" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css?v=2" />
+</head>
+<body>
+	<div class="main-wrap usercenter">
+		<div class="usercenter-wrap">
+			<div class="uw-top">
+				<img class="uw-top-cover" src="./img/list_cover.png" />
+				<div class="uw-top-title">小妖会馆</div>
+			</div>
+			<div class="uw-body">
+				<table class="uw-table">
+					<tr>
+						<td align="right">粉丝：</td>
+						<td align="left">60</td>
+						<td align="right">鸡蛋：</td>
+						<td align="left">330</td>
+					</tr>
+					<tr>
+						<td align="right">积分：</td>
+						<td align="left">60</td>
+						<td align="right">可兑换：</td>
+						<td align="left">330</td>
+					</tr>
+				</table>
+			</div>
+			<div class="uw-bottom">
+
+			</div>
+		</div>
+
+	</div>
+
+<script type="text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	adaptscreen(750);
+
+	$('body').on('touchend','.js-sw-type-select .un',function(){
+		$(this).siblings('.un').removeClass('cur');
+		$(this).addClass('cur');
+		if($(this).index() == 1){
+			$('.js-sell-bt').removeClass('hide');
+			$('.js-buy-bt').addClass('hide');
+		}else{
+			$('.js-sell-bt').addClass('hide');
+			$('.js-buy-bt').removeClass('hide');
+
+		}
+	})
+
+})
+function adaptscreen(widthnum){
+	var DEFAULT_WIDTH = widthnum, // 页面的默认宽度
+	ua = navigator.userAgent.toLowerCase(), // 根据 user agent 的信息获取浏览器信息
+	deviceWidth = window.screen.width, // 设备的宽度
+	devicePixelRatio = window.devicePixelRatio || 1, // 物理像素和设备独立像素的比例，默认为1
+	targetDensitydpi;    // Android4.0以下手机不支持viewport的width，需要设置target-densitydpi
+	if (ua.indexOf("android") !== -1 && parseFloat(ua.slice(ua.indexOf("android")+8)) < 4) {
+	targetDensitydpi = DEFAULT_WIDTH / deviceWidth * devicePixelRatio * 160;
+	$('meta[name="viewport"]').attr('content', 'target-densitydpi=' + targetDensitydpi + ', width=device-width, user-scalable=no');
+	}else{
+		$('meta[name="viewport"]').attr('content', 'target-densitydpi=device-dpi, width='+DEFAULT_WIDTH+'px, user-scalable=no');
+	}
+}
+</script>
+</body>
+</html>
