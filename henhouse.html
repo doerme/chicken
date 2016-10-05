@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no"> 
+	<meta http-equiv="Content-Type">
+	<meta content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=750px, user-scalable=no">
+	<title>农场鸡舍</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css?v=2" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css?v=2" />
+</head>
+<body>
+
+<div class="house-wrap">
+	<div class="glod-wrap">
+		<span>300000</span>
+	</div>
+
+	<img class="henhouse_title" src="./img/henhouse_title.png" />
+
+	<div class="henhouse-wrap">
+		<div class="henhouse_unit">
+			<img class="henhouse_user" src="./img/list_cover.png" />
+			<div class="henhouse_title">小妖的鸡</div>
+			<img class="henhouse_ck" src="./img/ck/ck1.png">
+			<div class="henhouse_time" lasttime="6000">loading</div>
+			<a class="henhouse_bt" href="javascript:;">立即捡蛋</a>
+		</div>
+		<div class="henhouse_unit">
+			<img class="henhouse_user" src="./img/list_cover.png" />
+			<div class="henhouse_title">小妖的鸡</div>
+			<img class="henhouse_ck" src="./img/ck/ck1.png">
+			<div class="henhouse_time" lasttime="2252">loading</div>
+			<a class="henhouse_bt" href="javascript:;">立即捡蛋</a>
+		</div>
+		<div class="henhouse_unit">
+			<img class="henhouse_user" src="./img/list_cover.png" />
+			<div class="henhouse_title">小妖的鸡</div>
+			<img class="henhouse_ck" src="./img/ck/ck1.png">
+			<div class="henhouse_time" lasttime="123215">loading</div>
+			<a class="henhouse_bt" href="javascript:;">立即捡蛋</a>
+		</div>
+		<div class="henhouse_unit">
+			<img class="henhouse_user" src="./img/list_cover.png" />
+			<div class="henhouse_title">小妖的鸡</div>
+			<img class="henhouse_ck" src="./img/ck/ck1.png">
+			<div class="henhouse_time" lasttime="3232">loading</div>
+			<a class="henhouse_bt" href="javascript:;">立即捡蛋</a>
+		</div>
+		<div class="henhouse_unit">
+			<img class="henhouse_user" src="./img/list_cover.png" />
+			<div class="henhouse_title">小妖的鸡</div>
+			<img class="henhouse_ck" src="./img/ck/ck1.png">
+			<div class="henhouse_time" lasttime="2222">loading</div>
+			<a class="henhouse_bt" href="javascript:;">立即捡蛋</a>
+		</div>
+
+	</div>
+
+	<!-- 增加分数弹窗 使用 hide addClass removeClass 显示 隐藏 -->
+	<div class="scroe-window pt-page-moveToTopFade">
+		<span class="plus"></span>
+		<span class="number1"></span>
+		<span class="number2"></span>
+		<span class="number3"></span>
+		<span class="number4"></span>
+		<span class="number5"></span>
+		<span class="number6"></span>
+	</div>
+	<!-- 增加分数弹窗 end -->
+
+</div>
+
+<script type="text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+var curDate = new Date();
+var timer={};
+$(function(){
+	adaptscreen(750);
+
+
+	/*倒计时*/
+	function formatSeconds(value) {
+	    var theTime = parseInt(value);// 秒
+	    var theTime1 = 0;// 分
+	    var theTime2 = 0;// 小时
+	    if(theTime > 60) {
+	        theTime1 = parseInt(theTime/60);
+	        theTime = parseInt(theTime%60);
+	    }
+	        var result = ""+parseInt(theTime)+"秒";
+	        if(theTime1 > 0) {
+	            result = ""+parseInt(theTime1)+"分"+result;
+	        }
+	    return result;
+	}
+	function daojishi(){
+		timer = setInterval(function(){
+			var tmpDate = new Date();
+			$('[lasttime]').each(function(){
+				var restsecond = $(this).attr('lasttime');
+				var restNow = parseInt((restsecond * 1000  - (tmpDate - curDate))/1000);
+				//console.log(restNow);
+				if(restNow < 0){
+					restNow = 0;
+					$('.rest-time').addClass('hide');
+					$('.js-search-bottle').attr('canthrow','1');
+				}else{
+					$(this).html(formatSeconds(restNow) + '开捞')
+					$('.js-search-bottle').attr('canthrow','0');
+				}
+			})
+		},1000)
+	}
+	daojishi();
+
+})
+
+function adaptscreen(widthnum){
+	var DEFAULT_WIDTH = widthnum, // 页面的默认宽度
+	ua = navigator.userAgent.toLowerCase(), // 根据 user agent 的信息获取浏览器信息
+	deviceWidth = window.screen.width, // 设备的宽度
+	devicePixelRatio = window.devicePixelRatio || 1, // 物理像素和设备独立像素的比例，默认为1
+	targetDensitydpi;    // Android4.0以下手机不支持viewport的width，需要设置target-densitydpi
+	if (ua.indexOf("android") !== -1 && parseFloat(ua.slice(ua.indexOf("android")+8)) < 4) {
+	targetDensitydpi = DEFAULT_WIDTH / deviceWidth * devicePixelRatio * 160;
+	$('meta[name="viewport"]').attr('content', 'target-densitydpi=' + targetDensitydpi + ', width=device-width, user-scalable=no');
+	}else{
+		$('meta[name="viewport"]').attr('content', 'target-densitydpi=device-dpi, width='+DEFAULT_WIDTH+'px, user-scalable=no');
+	}
+}
+</script>
+</body>
+</html>
