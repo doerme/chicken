@@ -399,10 +399,11 @@ body{
 
 .list-wrap .list-main .lm-bottom{
 	position: relative;
-	width: 695px;
+	width: 698px;
 	height: 110px;
 	background: url('../img/nc_window_bg.png') no-repeat center bottom;
 	background-size: 100% auto;
+	margin-left: -3px;
 }
 
 .list-wrap .list-main .lm-middle ul{
@@ -461,13 +462,13 @@ body{
 
 .house-wrap .glod-wrap{
 	position: absolute;
-	width: 306px;
+	width: 348px;
 	height: 84px;
 	line-height: 93px;
 	top: 10px;
 	left: 18px;
 	background: url('../img/house_glod_wrap.png') no-repeat center center;
-	background-size: cover;
+	background-size: 100% 100%;
 	font-size: 30px;
 	color: #FFF;
 	
@@ -484,11 +485,12 @@ body{
 
 .house-wrap .glod-wrap span{
 	display: block;
-	width: 150px;
-	padding-left: 105px;
+	width: 185px;
+	padding-left: 110px;
 	white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    text-align: right;
 }
 
 .house-wrap .henhouse_unit{
