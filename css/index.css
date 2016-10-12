@@ -649,7 +649,7 @@ body{
 .henhouse-list-wrap{
 	position: relative;
 	height: 1100px;
-	top: 250px;
+	top: 300px;
 }
 
 .house-wrap .henhouse_unit:nth-child(3n+1){
