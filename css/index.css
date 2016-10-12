@@ -362,6 +362,50 @@ body{
 	color: #fffffe;
 }
 
+.input-wrap{
+	position: absolute;
+	width: 750px;
+	height: 576px;
+	top: 200px;
+	left: 50%;
+	margin-left: -375px;
+	background: url('../img/input_wrap.png') no-repeat center center;
+	background-size: cover;
+}
+
+.input-wrap .input-bt{
+	position: absolute;
+	top: 390px;
+	left: 50%;
+	margin-left: -285px;
+	background: url('../img/null_bt.png') no-repeat center center;
+	background-size: cover;
+	width: 571px;
+	height: 115px;
+	line-height: 115px;
+	text-align: center;
+	font-size: 48px;
+	color: #fffffe;
+}
+
+.input-wrap .input-main{
+	position: absolute;
+	top: 220px;
+	left: 50%;
+	margin-left: -285px;
+	border: none;
+	-webkit-appearance:none;
+	width: 571px;
+	height: 115px;
+	line-height: 115px;
+	border-radius: 45px;
+	background: #FFF;
+	text-align: center;
+	border:4px solid #a67740;
+	font-size: 36px;
+	color: #3a230a;
+}
+
 .list-wrap{
 	position: absolute;
 	left: 0px;
