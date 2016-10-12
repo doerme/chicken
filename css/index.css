@@ -414,6 +414,7 @@ body{
 	height: 100%;
 	background: url('../img/page_bg.jpg') no-repeat center center;
 	background-size: cover;
+	overflow-y: auto; 
 }
 
 .list-wrap .list-main{
@@ -484,13 +485,14 @@ body{
 	right: 28px;
 	top: 30px;
 	display: block;
-	width: 159px;
-	height: 57px;
-	line-height: 57px;
-	background: url('../img/list_buy_bt.png') no-repeat;
-	font-size: 32px;
+	width: 158px;
+	padding-right: 20px;
+	height: 56px;
+	line-height: 52px;
+	background: url('../img/list_buy_bt2.png') no-repeat;
+	font-size: 28px;
 	color: #FFF;
-	text-indent: 60px;
+	text-align: right;
 }
 
 .house-wrap{
