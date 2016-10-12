@@ -276,7 +276,7 @@ body{
 .usercenter-wrap .uw-bottom{
 	overflow: hidden;
 	position: relative;
-	background: url('../img/usercenter_window_bg.png') no-repeat center bottom;
+	background: url('../img/usercenter_window2_bg.png') no-repeat center bottom;
 	background-size: 100% auto;
 	width: 100%;
 	height: 350px;
@@ -285,18 +285,18 @@ body{
 .usercenter-wrap .uw-bottom .bottom-bt{
 	position: absolute;
 	width: 240px;
-	height: 130px;
+	height: 180px;
 }
 
 .usercenter-wrap .uw-bottom .bb1{
 	left: 50%;
-	top: 10px;
+	top: 60px;
 	margin-left: -260px;
 }
 
 .usercenter-wrap .uw-bottom .bb2{
 	left: 50%;
-	top: 10px;
+	top: 60px;
 	margin-left: 30px;
 }
 
