@@ -60,10 +60,35 @@
 
 </div>
 
-<script type="text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+
+<!-- 弹窗 -->
+<div class="tips-wrap js-buynum hide">
+	<div class="tips-wrap-mask"></div>
+	<div class="input-wrap">
+		<input class="input-main" type="tel" name="" value="0" maxlength="9" />
+		<a href="javascript:;" class="input-bt js-input-bt">确定</a>
+	</div>
+</div>
+<!-- 弹窗 end -->
+
+<script type="text/javascript" src = "./js/zepto.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	adaptscreen(750);
+	/*购买*/
+	$('body').on('tap','.list-buy-bt', function(){
+		$('.js-buynum').removeClass('hide');
+	})
+
+	/*确定*/
+	$('body').on('tap','.js-input-bt',function(){
+		$('.js-buynum').addClass('hide');
+	})
+
+	/*取消*/
+	$('body').on('tap','.tips-wrap-mask',function(){
+		$('.js-buynum').addClass('hide');
+	})
 
 })
 
