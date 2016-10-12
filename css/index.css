@@ -462,16 +462,42 @@ body{
 
 .house-wrap .glod-wrap{
 	position: absolute;
-	width: 348px;
+	width: 306px;
 	height: 84px;
 	line-height: 93px;
-	top: 10px;
+	top: 5px;
 	left: 18px;
 	background: url('../img/house_glod_wrap.png') no-repeat center center;
 	background-size: 100% 100%;
 	font-size: 30px;
 	color: #FFF;
 	
+}
+
+.house-wrap .mark-wrap{
+	position: absolute;
+	width: 346px;
+	height: 56px;
+	line-height: 56px;
+	top: 18px;
+	right: 18px;
+	background: url('../img/right-top-mark.png') no-repeat center center;
+	background-size: 100% 100%;
+	
+	color: #FFF;
+}
+
+.house-wrap .mark-wrap ul{
+	padding-left: 22px;
+}
+
+.house-wrap .mark-wrap li{
+	float: left;
+	margin-right: 10px;
+}
+
+.house-wrap .mark-wrap span{
+	font-size: 22px;
 }
 
 .house-wrap .henhouse_title{
@@ -485,10 +511,9 @@ body{
 
 .house-wrap .glod-wrap span{
 	display: block;
-	width: 185px;
-	padding-left: 110px;
+	width: 165px;
+	padding-left: 100px;
 	white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
     text-align: right;
 }
@@ -677,6 +702,11 @@ body{
 	background-position: -134px -1367px;
 	width: 74px;
 	height: 133px;
+}
+.scroe-window span.dot{
+	background-position: -142px -1520px;
+	width: 42px;
+	height: 42px;
 }
 
 .pt-page-moveToTopFade {
