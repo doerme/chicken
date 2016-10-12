@@ -573,7 +573,8 @@ body{
 
 
 .house-wrap .henhouse_unit{
-	position: absolute;
+	display: inline-block;
+	position: relative;
 	width: 300px;
 	height: 300px;
 	background: url('../img/henhouse_unit.png') no-repeat center center;
@@ -644,45 +645,38 @@ body{
 	color: #FFF;
 }
 
-.henhouse-wrap:nth-child(1){
-	margin-top: 200px;
-}
 
-.henhouse-wrap{
+.henhouse-list-wrap{
 	position: relative;
 	height: 1100px;
+	top: 250px;
 }
 
-.house-wrap .henhouse_unit:nth-child(5n+1){
-	position: absolute;
-	top: 100px;
-	left: 36px;
+.house-wrap .henhouse_unit:nth-child(3n+1){
+	float: left;
 }
 
-.house-wrap .henhouse_unit:nth-child(5n+2){
-	position: absolute;
-	top: 100px;
-	right: 36px;
+.house-wrap .henhouse_unit:nth-child(3n+2){
+	float: right;
 }
 
-.house-wrap .henhouse_unit:nth-child(5n+3){
-	position: absolute;
-	top: 400px;
-	left: 50%;
-	margin-left: -150px;
+.house-wrap .henhouse_unit:nth-child(3n+3){
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+.house-wrap .henhouse_unit:nth-child(3n+3):after{
+	content: '';
+	overflow: hidden;
+	clear: both;
+}
+.house-wrap .henhouse_unit:nth-child(3n+3):before{
+	content: '';
+	overflow: hidden;
+	clear: both;
 }
 
-.house-wrap .henhouse_unit:nth-child(5n+4){
-	position: absolute;
-	top: 700px;
-	left: 36px;
-}
-
-.house-wrap .henhouse_unit:nth-child(5n+5){
-	position: absolute;
-	top: 700px;
-	right: 36px;
-}
 
 
 .scroe-window{
