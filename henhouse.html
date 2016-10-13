@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css?v=2" />
 	<link rel="stylesheet" type="text/css" href="./css/loading.css?v=2" />
 </head>
-<body>
+<body class="house-bg">
 
 <div class="house-wrap">
 	<div class="glod-wrap">
@@ -150,15 +150,23 @@ $(function(){
 	adaptscreen(750);
 
 
+	setInterval(function(){
+		playAnimation();
+	},2000);
+
+
 	
 	daojishi();
 
 
 	/*翻页逻辑*/
-	$('.house-wrap')[0].onscroll  = function(){
-		console.log(ifScrollBottom($('.house-wrap')[0]), canNextPage);
-        if(ifScrollBottom($('.house-wrap')[0]) && canNextPage){
-        	console.log('到底了');
+	$(window).scroll(function(){
+	　　var scrollTop = $(this).scrollTop();
+	　　var scrollHeight = $(document).height();
+	　　var windowHeight = $(this).height();
+		console.log(scrollHeight,scrollTop,windowHeight);
+	　　if(scrollHeight - scrollTop <= windowHeight + 10 && canNextPage){
+	　　　　console.log('到底了');
             $('.loading-wrap').removeClass('hide');
             canNextPage = false;
             setTimeout(function(){
@@ -167,12 +175,20 @@ $(function(){
             	canNextPage = true;
             	$('.loading-wrap').addClass('hide');
             },1000)
-            
-        }
-    }
+	　　}
+	});
 	/*翻页逻辑 end*/
 
 })
+
+
+/*播放动画*/
+function playAnimation(){
+	$('.scroe-window').addClass('hide').removeClass('pt-page-moveToTopFade');
+	setTimeout(function(){
+		$('.scroe-window').addClass('pt-page-moveToTopFade').removeClass('hide');
+	},20);
+}
 
 
 /*倒计时*/
@@ -208,17 +224,6 @@ function daojishi(){
 			}
 		})
 	},1000)
-}
-
-function ifScrollBottom(obj){
-	var divHight = $(obj).height();
-	var distanceScrollCount = obj.scrollHeight;
-    var distanceScroll = obj.scrollTop;
-    if(distanceScroll + divHight >= distanceScrollCount){
-        return true;
-    }else{
-    	return false;
-    }
 }
 
 function adaptscreen(widthnum){
