@@ -152,7 +152,7 @@
 
 
 
-<script type="text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src = "./js/zepto.min.js"></script>
 <script type="text/javascript">
 var curDate = new Date();
 var timer={};
@@ -169,6 +169,10 @@ $(function(){
 
 	
 	daojishi();
+
+	$('body').on('tap','.tips-mask',function(){
+		$('.tips-wrap').addClass('hide');
+	})
 
 
 	/*翻页逻辑*/
