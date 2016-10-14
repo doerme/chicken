@@ -902,7 +902,7 @@ body.house-bg{
   display: inline-block; 
 }
 
-.tips-wrap{
+.tips-wrap.small{
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -910,7 +910,7 @@ body.house-bg{
 	height: 100%;
 }
 
-.tips-wrap .tips-mask{
+.tips-wrap.small .tips-mask{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -919,7 +919,7 @@ body.house-bg{
 	background: rgba(0,0,0,0.5);
 }
 
-.tips-wrap .tips-main{
+.tips-wrap.small .tips-main{
 	position: absolute;
 	width: 522px;
 	height: 236px;
@@ -930,7 +930,7 @@ body.house-bg{
 	background-size: cover; 
 }
 
-.tips-wrap .tips-main .tm-txt{
+.tips-wrap.small .tips-main .tm-txt{
 	position: absolute;
 	left: 20px;
 	top: 100px;
@@ -942,7 +942,7 @@ body.house-bg{
 	color: #975500;
 }
 
-.tips-wrap .tips-main .tm-bt{
+.tips-wrap.small .tips-main .tm-bt{
 	position: absolute;
 	width: 210px;
 	height: 69px;
