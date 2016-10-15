@@ -92,6 +92,69 @@
 
 </div>
 
+<div class="ck-temp hide">
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+	<li>
+		<div class="list-cover l">
+			<img class="cover dib" src="./img/list_cover.png" />
+		</div>
+		<div class="list-nickname r">队长让少妇先走</div>
+	</li>
+</div>
+
 <script type="text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -102,10 +165,13 @@ $(function(){
 		console.log('onBottomEven');
 		$('.js-loader').removeClass('hide');
 		setTimeout(function(){
+			$('.fan-ul').append($('.ck-temp').html());
 			$('.js-loader').addClass('hide');
 		},1000)
 
 	}
+
+
 
 	$(window).scroll(function(){
 	　　var scrollTop = $(this).scrollTop();
