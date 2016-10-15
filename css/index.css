@@ -808,6 +808,7 @@ body.house-bg{
 	position: relative;
 	height: 160px;
 	line-height: 160px;
+	overflow: hidden;
 }
 
 .main-wrap.fanlist .list-cover{
@@ -832,6 +833,7 @@ body.house-bg{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	box-sizing: border-box;
 }
 
 .main-wrap.fanlist .loader {
